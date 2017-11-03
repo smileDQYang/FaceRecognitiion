@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXn-jd-Um3">
+                                <rect key="frame" x="10" y="622" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.061320394" green="0.80214342949999995" blue="0.19961295109999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hmu-lX-7Uc"/>
+                                    <constraint firstAttribute="width" constant="46" id="Q7p-iN-yGC"/>
+                                </constraints>
+                                <state key="normal" title="换图">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.24118385980000001" green="0.65436698719999997" blue="0.36130466350000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeImgae:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SE1-Rg-1v6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鱼眼效果(建议开启)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BE5-hn-EWx">
+                                <rect key="frame" x="86" y="629" width="140" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="bqD-NV-Pf5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-tM-kBo">
+                                <rect key="frame" x="306" y="621" width="56" height="31"/>
+                                <color key="tintColor" red="0.061320394" green="0.80214342949999995" blue="0.19961295109999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="b9V-Kb-Dul"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bIt-tM-kBo" firstAttribute="leading" secondItem="BE5-hn-EWx" secondAttribute="trailing" constant="80" id="1fd-7S-xEq"/>
+                            <constraint firstItem="dXn-jd-Um3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="O2r-dl-btL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BE5-hn-EWx" secondAttribute="bottom" constant="20" id="PKW-BO-A2z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bIt-tM-kBo" secondAttribute="bottom" constant="15" id="Wch-FH-e9W"/>
+                            <constraint firstItem="BE5-hn-EWx" firstAttribute="leading" secondItem="dXn-jd-Um3" secondAttribute="trailing" constant="30" id="Ybb-Qs-c8h"/>
+                            <constraint firstItem="bIt-tM-kBo" firstAttribute="leading" secondItem="BE5-hn-EWx" secondAttribute="trailing" constant="80" id="b6r-tb-mgO"/>
+                            <constraint firstItem="BE5-hn-EWx" firstAttribute="leading" secondItem="dXn-jd-Um3" secondAttribute="trailing" constant="30" id="eZQ-AF-fOC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIt-tM-kBo" secondAttribute="trailing" constant="15" id="k3n-C5-S2s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dXn-jd-Um3" secondAttribute="bottom" constant="15" id="uID-U0-ayo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myswitch" destination="bIt-tM-kBo" id="S6D-VQ-SDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
